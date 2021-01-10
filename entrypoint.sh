@@ -36,6 +36,10 @@ chmod 600 /etc/ssl/private/novnc_combined.pem
   --cert /etc/ssl/private/novnc_combined.pem --ssl-only \
   > /var/log/novnc.log 2>&1 &
 
+echo "Launch your web browser and open https://localhost:9020/vnc.html"
+echo "Verify the certificate fingerprint:"
+openssl x509 -in /etc/ssl/certs/novnc_cert.pem -noout -fingerprint -sha256
+
 # Start shell
 
 /bin/bash
