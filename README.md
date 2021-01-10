@@ -14,7 +14,7 @@ docker pull iphoneintosh/kali-docker:latest
 
 ## 2) Run
 
-Second, start a new container from the previously pulled image. This opens a new shell on your console as well as a Kali Desktop which you can access in your browser on `http://localhost:8080/vnc.html`.
+Second, start a new container from the previously pulled image. This opens a new shell on your console as well as a Kali Desktop which you can access in your browser on `https://localhost:8080/vnc.html`.
 
 ```
 docker run --rm -it -p 9020:8080 -p 9021:5900 iphoneintosh/kali-docker:latest
@@ -38,6 +38,10 @@ The default configuration is set as follows. Feel free to change this as require
 - `-e NOVNCPORT=8080`
   - By default, the noVNC server runs on port 8080 within the container.
   - Note: If you change this port, you also need to change the port mapping with the `-p 9020:8080` parameter.
+- `-v /your/path/to/cert.pem:/etc/ssl/certs/novnc_cert.pem -v /your/path/to/key.pem:/etc/ssl/certs/novnc_key.pem`
+  - By default, the container creates a new self-signed certificate for the noVNC connection at creation time.
+  - You can optionally mount your self-signed certificate and key to the container.
+  - Use `openssl req -new -x509 -days 365 -nodes -out cert.pem -keyout key.pem` to create a new certificate and key.
 
 ## Customization
 
