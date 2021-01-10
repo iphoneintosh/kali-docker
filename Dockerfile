@@ -1,8 +1,7 @@
 FROM kalilinux/kali-rolling:latest
 
-LABEL author="@iphoneintosh"
 LABEL website="https://github.com/iphoneintosh/kali-docker"
-LABEL description="Custom kali linux image with XFCE desktop for penetration testing."
+LABEL description="Kali Linux with XFCE Desktop via VNC and noVNC in browser."
 
 # Install kali packages
 

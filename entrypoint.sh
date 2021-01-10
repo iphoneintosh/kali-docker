@@ -11,10 +11,10 @@ chmod 600 /root/.vnc/passwd
 if [ $VNCEXPOSE = 1 ]
 then
   # Expose VNC
-  vncserver :0 -name Kali -rfbport $VNCPORT -geometry $VNCDISPLAY -depth $VNCDEPTH > /var/log/vncserver.log 2>&1
+  vncserver :0 -rfbport $VNCPORT -geometry $VNCDISPLAY -depth $VNCDEPTH > /var/log/vncserver.log 2>&1
 else
   # Localhost only
-  vncserver :0 -name Kali -rfbport $VNCPORT -geometry $VNCDISPLAY -depth $VNCDEPTH -localhost > /var/log/vncserver.log 2>&1
+  vncserver :0 -rfbport $VNCPORT -geometry $VNCDISPLAY -depth $VNCDEPTH -localhost > /var/log/vncserver.log 2>&1
 fi
 
 # Start noVNC server
