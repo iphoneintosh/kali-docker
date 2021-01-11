@@ -45,11 +45,11 @@ The default configuration is set as follows. Feel free to change this as require
 
 ## Customization
 
-You can also build a custom image, i.e., if you want to use another Kali Desktop. If so, you can simply pass the Kali Desktop of your choice (i.e., `mate`, `gnome`, ...) as build argument. By default, the XFCE Desktop is configured. You may also edit the `Dockerfile` or `entrypoint.sh` to install custom packages.
+You can also build a custom image, i.e., if you want to use another Kali Desktop. If so, you can simply pass the Kali Desktop of your choice (i.e., `mate`, `gnome`, ...) as build argument. By default, the XFCE Desktop is configured. You may also edit the `Dockerfile` or `entrypoint.sh` to install custom packages. Also, you can specify different Kali Linux metapackages, i.e., `core`, `default`, `light`, `large`, `everything`, or `top10`. See [https://www.kali.org/news/major-metapackage-makeover/](https://www.kali.org/news/major-metapackage-makeover/) for more details and metapackges.
 
 ```
 git clone https://github.com/iphoneintosh/kali-docker
 cd kali-docker
-docker build -t myKali --build-arg KALI_DESKTOP=xfce .
+docker build -t myKali --build-arg KALI_DESKTOP=xfce KALI_METAPACKAGE=large .
 docker run --rm -it -p 9020:8080 -p 9021:5900 myKali
 ```
