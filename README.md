@@ -12,6 +12,8 @@ First, pull the image:
 docker pull iphoneintosh/kali-docker:latest
 ```
 
+You can also pull images with preconfigured metapackages: `iphoneintosh/kali-docker:default`, `iphoneintosh/kali-docker:large`, or `iphoneintosh/kali-docker:top10`.
+
 ## 2) Run
 
 Second, start a new container from the previously pulled image. This opens a new shell on your console as well as a Kali Desktop which you can access in your browser on `https://localhost:8080/vnc.html`.
@@ -45,7 +47,7 @@ The default configuration is set as follows. Feel free to change this as require
 
 ## Customization
 
-You can also build a custom image, i.e., if you want to use another Kali Desktop. If so, you can simply pass the Kali Desktop of your choice (i.e., `mate`, `gnome`, ...) as build argument. By default, the XFCE Desktop is configured. You may also edit the `Dockerfile` or `entrypoint.sh` to install custom packages. Also, you can specify different Kali Linux metapackages, i.e., `core`, `default`, `light`, `large`, `everything`, or `top10`. See [https://www.kali.org/news/major-metapackage-makeover/](https://www.kali.org/news/major-metapackage-makeover/) for more details and metapackges.
+You can also build a custom image, i.e., if you want to use another Kali Desktop. If so, you can simply pass the Kali Desktop of your choice (i.e., `mate`, `gnome`, ...) as build argument. By default, the XFCE Desktop is configured. You may also edit the `Dockerfile` or `entrypoint.sh` to install custom packages. Also, you can specify different Kali Linux metapackages, i.e., `core`, `default`, `light`, `large`, `everything`, or `top10`. See [https://www.kali.org/news/major-metapackage-makeover/](https://www.kali.org/news/major-metapackage-makeover/) for more details and metapackages.
 
 ```
 git clone https://github.com/iphoneintosh/kali-docker
