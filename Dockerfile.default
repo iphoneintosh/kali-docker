@@ -1,4 +1,0 @@
-FROM Anhilakos/kali-docker:latest
-
-RUN apt-get update
-RUN apt-get -y install kali-linux-default
