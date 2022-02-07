@@ -52,7 +52,7 @@ You can also build a custom image, i.e., if you want to use another Kali Desktop
 ```
 git clone https://github.com/anihilakos/kali-docker
 cd kali-docker
-docker build -t myKali --build-arg KALI_DESKTOP=xfce KALI_METAPACKAGE=large .
+docker build -t ctf-kali --build-arg KALI_DESKTOP=xfce --build-arg KALI_METAPACKAGE=large .
 docker run --rm -it -p 9020:8080 -p 9021:5900 myKali
 ```
 
