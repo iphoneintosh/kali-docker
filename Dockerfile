@@ -1,6 +1,6 @@
 FROM kalilinux/kali-rolling:latest
 
-LABEL website="https://github.com/iphoneintosh/kali-docker"
+LABEL website="https://github.com/Anihilakos/kali-docker"
 LABEL description="Kali Linux with XFCE Desktop via VNC and noVNC in browser."
 
 # Install kali packages
@@ -9,7 +9,10 @@ ARG KALI_METAPACKAGE=core
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 RUN apt-get -y upgrade
-RUN apt-get -y install kali-linux-${KALI_METAPACKAGE}
+# TODO Fix metapackage tagging when I push my docker image on the docker hub 
+# RUN apt-get -y install kali-linux-${KALI_METAPACKAGE}
+RUN apt-get -y install kali-linux-large
+
 RUN apt-get clean
 
 # Install kali desktop
