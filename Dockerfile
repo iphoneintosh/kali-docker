@@ -1,7 +1,7 @@
-FROM kalilinux/kali-rolling:latest
+FROM kalilinux/kali-rolling
 
 LABEL website="https://github.com/Anihilakos/kali-docker"
-LABEL description="Kali Linux with XFCE Desktop via VNC and noVNC in browser."
+#LABEL description="Kali Linux with XFCE Desktop via VNC and noVNC in browser."
 
 # Install kali packages
 
