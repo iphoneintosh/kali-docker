@@ -57,7 +57,7 @@ docker run --rm -it -p 9020:8080 -p 9021:5900 work-kali
 ```
 Run with persistence
 ```
-docker run --rm -it -p 9022:8080 -p 9023:5900 -p 8888:8000 --mount src=kali-work-root,dst=/root --mount src=kali-work-postgres,dst=/var/lib/postgresql --name persistent-kali-work work-kali
+docker run --rm -it -p 9022:8080 -p 9023:5900 -p 8888:8000 --mount src=kali-work-root,dst=/root --mount src=kali-work-postgres,dst=/var/lib/postgresql --name persistent-kali-work kali-work
 ```
 
 
