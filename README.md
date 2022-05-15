@@ -52,12 +52,10 @@ You can also build a custom image, i.e., if you want to use another Kali Desktop
 ```
 git clone https://github.com/anihilakos/kali-docker
 cd kali-docker
-docker build -t work-kali --build-arg KALI_DESKTOP=xfce --build-arg KALI_METAPACKAGE=large .
-docker run --rm -it -p 9020:8080 -p 9021:5900 work-kali
+docker build -t kali-ctf --build-arg KALI_DESKTOP=xfce --build-arg KALI_METAPACKAGE=large .
+docker run --rm -it -p 9020:8080 -p 9021:5900 kali-ctf
 ```
 Run with persistence
 ```
-docker run --rm -it -p 9022:8080 -p 9023:5900 -p 8888:8000 --mount src=kali-work-root,dst=/root --mount src=kali-work-postgres,dst=/var/lib/postgresql --name persistent-kali-work kali-work
+docker run --rm -it -p 9022:8080 -p 9023:5900 -p 8888:8000 --mount src=kali-ctf-root,dst=/root --mount src=kali-ctf-postgres,dst=/var/lib/postgresql --name persistent-kali-ctf kali-ctf
 ```
-
-
