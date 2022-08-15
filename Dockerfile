@@ -1,6 +1,7 @@
 FROM kalilinux/kali-rolling:latest
 
 LABEL website="https://github.com/iphoneintosh/kali-docker"
+LABEL website="https://github.com/ProAdmin007/kali-docker-vnc-novnc"
 LABEL description="Kali Linux with XFCE Desktop via VNC and noVNC in browser."
 
 # Install kali packages
